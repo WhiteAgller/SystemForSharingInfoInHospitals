@@ -1,8 +1,5 @@
 image: mcr.microsoft.com/dotnet/sdk:latest
 
-before_script:
-  - apt-get install -y docker.io    
-
 stages:
   - build
   - test
@@ -13,9 +10,7 @@ build-docker:
     - shared-fi
   script:
     - cd src/Web
-    - dotnet publish -c Release
-    - docker build -t WebApi-image -f Dockerfile .
-    - docker create --name WebApi WebApi-image
+    - dotnet build
   artifacts:
    expire_in: 10 minutes
 
