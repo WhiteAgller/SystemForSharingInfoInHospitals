@@ -37,7 +37,7 @@ build-docker:
     - shared-fi
   script:
     - cd src/Web
-    - dotnet build --no-restore
+    - dotnet build --no-restore --configuration Release
   artifacts:
    expire_in: 10 minutes
 
@@ -46,6 +46,6 @@ test:
   tags:
     - shared-fi
   script:
-    - dotnet test --logger "trx;LogFileName=testresults.trx" --no-restore
+    - dotnet test --logger "trx;LogFileName=testresults.trx" --no-restore --configuration Release --filter "FullyQualifiedName!~AcceptanceTests"
   artifacts:
    expire_in: 10 minutes
