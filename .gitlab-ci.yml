@@ -31,7 +31,7 @@ stages:
   - build
   - test
 
-build-docker:
+build:
   stage: build
   tags:
     - shared-fi
