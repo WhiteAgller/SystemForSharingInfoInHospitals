@@ -3,6 +3,10 @@ image: mcr.microsoft.com/dotnet/sdk:latest
 services:
   - microsoft/mssql-server-linux
 
+variables:
+  ACCEPT_EULA: Y
+
+
 stages:
   - build
   - test
