@@ -1,0 +1,26 @@
+image: mcr.microsoft.com/dotnet/sdk:latest
+
+stages:
+  - build
+  - test
+
+build-docker:
+  stage: build
+  tags:
+    - shared-fi
+  script:
+    - cd src/Web
+    - dotnet publish -c Release
+    - docker build -t counter-image -f Dockerfile .
+    - docker create --name WebApi WebApi-image
+  artifacts:
+   expire_in: 10 minutes
+
+test:
+  stage: test
+  tags:
+    - shared-fi
+  script:
+    - dotnet test
+  artifacts:
+   expire_in: 10 minutes
