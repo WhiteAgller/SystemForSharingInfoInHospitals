@@ -2,6 +2,18 @@
 
 The project was generated using the [Clean.Architecture.Solution.Template](https://github.com/jasontaylordev/SystemForSharingInfoInHospitals) version 8.0.0.
 
+## PV293 Info
+This project is related to this topic in IS: https://is.muni.cz/auth/rozpis/tema?fakulta=1433;kod=PV293;predmet=1568719;sorter=vedouci;balik=502485;tema=502511;uplne_info=1;obdobi=9223
+
+Students who collaborate on this topic:
+ - [Jaroslav Plšek](https://is.muni.cz/auth/osoba/524640) 524640
+ - [Jan Straka](https://is.muni.cz/auth/osoba/514615) 514615
+
+ ### Task 1
+ There is a link to to figma: https://www.figma.com/file/dYQz3lVF8ujAZqDNmikVPS/Event-Storming-(Community)-(Copy)?type=design&node-id=1%3A21&mode=design&t=dn0KZw6tJQ2EbbVG-1
+
+ ### Task 2
+
 ## Build
 
 Run `dotnet build -tl` to build the solution.
