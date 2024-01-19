@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/windows/nanoserver:2022
+image: mcr.microsoft.com/windows/nanoserver:ltsc2022
 
 variables:
   # 1) Name of directory where restore and build objects are stored.
