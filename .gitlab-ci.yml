@@ -46,7 +46,7 @@ test:
   tags:
     - shared-fi
   script:
-    - dotnet remove tests/Applicatins.FunctionalTests/Applicatins.FunctionalTests.csproj reference src/Web/Web.csproj # Remove due to problems witn localDB on linux
+    - dotnet remove tests/Application.FunctionalTests/Application.FunctionalTests.csproj reference src/Web/Web.csproj # Remove due to problems witn localDB on linux
     - dotnet test --logger "trx;LogFileName=testresults.trx" --no-restore --configuration Release --filter "FullyQualifiedName!~AcceptanceTests"
   artifacts:
    expire_in: 10 minutes
