@@ -1,4 +1,6 @@
 
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Entities;
 
@@ -12,6 +14,16 @@ public record AddDiagnosisCommand : IRequest
     public string TreatmentPlan { get; set; } = null!;
 }
 
+public class AddDiagnosisController : ApiControllerBase
+{
+    [HttpPost]
+    public async Task<IActionResult> AddDiagnosis(AddDiagnosisCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
+}
+
 public class AddDiagnosisCommandHandler(IApplicationDbContext context)
     : IRequestHandler<AddDiagnosisCommand>
 {
@@ -20,7 +32,7 @@ public class AddDiagnosisCommandHandler(IApplicationDbContext context)
         var patient = await context.Patients.FindAsync(request.PatientId);
         Guard.Against.NotFound(request.PatientId, patient);
         
-        patient.MedicalRecord.History.Add(new History()
+        patient.MedicalRecord.Difficulties.Add(new Difficulty()
         {
             DoctorId = request.DoctorId,
             Diagnosis = request.Diagnosis,

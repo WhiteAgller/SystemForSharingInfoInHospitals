@@ -11,20 +11,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="562b2f8c-eb99-46fa-9edf-ccb8d22813a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Commands/DeletePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/DeletePatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Commands/UpdatePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/UpdatePatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientRegistered.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientRegistered.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientUpdated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientUpdated.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatientDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatients.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatients.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" afterDir="false" />
+    <list default="true" id="562b2f8c-eb99-46fa-9edf-ccb8d22813a4" name="Changes" comment="feat: added appointment and medicalrecord">
+      <change beforePath="$PROJECT_DIR$/src/Application/Appointments/Commands/CancelAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Appointments/Commands/CancelAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Appointments/Commands/RescheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Appointments/Commands/RescheduleAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Appointments/Commands/SheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Appointments/Commands/SheduleAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/MedicalRecords/Commands/AddDiagnosis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/MedicalRecords/Commands/AddDiagnosis.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/MedicalRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entities/MedicalRecord.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +185,7 @@
       <workItem from="1705695702535" duration="1176000" />
       <workItem from="1705696889800" duration="14027000" />
       <workItem from="1705711591447" duration="2495000" />
-      <workItem from="1705745082529" duration="3539000" />
+      <workItem from="1705745082529" duration="9613000" />
     </task>
     <task id="LOCAL-00001" summary="feat: project setup and added register patient">
       <option name="closed" value="true" />
@@ -203,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705711429648</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: added medical record, appointment and docker-compose">
+      <option name="closed" value="true" />
+      <created>1705752869684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705752869684</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: added appointment and medicalrecord">
+      <option name="closed" value="true" />
+      <created>1705755205025</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705755205025</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +221,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: project setup and added register patient" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: project setup and added register patient" />
+    <MESSAGE value="feat: added medical record, appointment and docker-compose" />
+    <MESSAGE value="feat: added appointment and medicalrecord" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added appointment and medicalrecord" />
   </component>
 </project>

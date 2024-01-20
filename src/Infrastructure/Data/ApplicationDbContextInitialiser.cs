@@ -104,9 +104,9 @@ public class ApplicationDbContextInitialiser
                 MedicalRecord = new MedicalRecord()
                 {
                     PatientId = 1,
-                    History = new List<History>()
+                    Difficulties = new List<Difficulty>()
                     {
-                        new History()
+                        new Difficulty()
                         {
                             DoctorId = 1,
                             Diagnosis = "Stomachache",

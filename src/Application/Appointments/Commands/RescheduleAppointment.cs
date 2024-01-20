@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Enums;
 
@@ -8,6 +10,16 @@ public record ReschedulePatientCommand : IRequest
     public int Id { get; set; }
     
     public DateTime AppointmentDate { get; set; }
+}
+
+public class RecheduleAppointmentController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> RescheduleAppointment(ReschedulePatientCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
 }
 
 public class ReschedulePatientCommandHandler(IApplicationDbContext context) : IRequestHandler<ReschedulePatientCommand>

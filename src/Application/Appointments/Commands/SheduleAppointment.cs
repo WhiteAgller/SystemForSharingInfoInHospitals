@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Entities;
 using SystemForSharingInfoInHospitals.Domain.Enums;
@@ -12,6 +14,15 @@ public record ScheduleAppointmentCommand : IRequest<int>
     public int DoctorId { get; set; }
 
     public DateTime AppointmentDate { get; set; }
+}
+
+public class ScheduleAppointmentController : ApiControllerBase
+{
+    [HttpPost]
+    public async Task<ActionResult<int>> ScheudleAppointment(ScheduleAppointmentCommand command)
+    {
+        return await Mediator.Send(command);
+    }
 }
 
 public class ScheduleAppointmentCommandHandler(IApplicationDbContext context)

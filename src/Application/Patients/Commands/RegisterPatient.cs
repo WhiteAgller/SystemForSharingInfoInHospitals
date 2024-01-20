@@ -34,7 +34,7 @@ public class RegisterPatientCommandHandler(IApplicationDbContext context) : IReq
             Name = request.Name,
             MedicalRecord = new MedicalRecord()
             {   
-               History = new List<History>()
+               Difficulties = new List<Difficulty>()
             },
             DateOfBirth = request.DateOfBirth,
             Alergies = request.Alergies,
