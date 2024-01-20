@@ -20,11 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PatientVisitsDoctors", "PatientVisitsDoctors", "{81EE6C03-7AD3-41C3-8AF4-A1F7D6F7C46C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{BE743608-91F4-4497-BA87-678CAAB17D5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVD_Application", "src\PVD_Application\PVD_Application.csproj", "{BE743608-91F4-4497-BA87-678CAAB17D5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{1EE9F39A-003C-43D5-9768-EDDDF0B13BAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVD_Domain", "src\PVD_Domain\PVD_Domain.csproj", "{1EE9F39A-003C-43D5-9768-EDDDF0B13BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{3AC4FF71-AC8A-4C11-A4D3-A6E6BC207FD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVD_Infrastructure", "src\PVD_Infrastructure\PVD_Infrastructure.csproj", "{3AC4FF71-AC8A-4C11-A4D3-A6E6BC207FD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{A56F7876-281C-4D57-BE71-40863302617E}"
 EndProject

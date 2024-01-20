@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\PVD_Application\PVD_Application.csproj" />
   </ItemGroup>
 
 </Project>
