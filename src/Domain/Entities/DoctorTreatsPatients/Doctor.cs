@@ -11,6 +11,7 @@ public class Doctor : BaseAuditableEntity
     public string? Surname { get; set; }
     public string? Degree { get; set; }
 
+    public int? DepartmentID { get; set; }
     public IList<HoursPerDay> OfficeHours { get; set;} = new List<HoursPerDay>();
 
 

@@ -12,6 +12,7 @@ public record UpdateDoctorCommand : IRequest
     public string? Name { get; init; }
     public string? Surname { get; init; }
     public string? Degree { get; init; }
+    public int? DepartmentID { get; set; }
 }
 
 public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand>

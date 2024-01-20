@@ -754,6 +754,86 @@
         ]
       }
     },
+    "/api/Departments": {
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "operationId": "CreateDepartment",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateDepartmentCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Departments/{id}": {
+      "put": {
+        "tags": [
+          "Departments"
+        ],
+        "operationId": "UpdateDepartment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDepartmentCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
     "/api/Doctors": {
       "post": {
         "tags": [
@@ -1354,6 +1434,38 @@
           }
         }
       },
+      "CreateDepartmentCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateDepartmentCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
       "RegisterDoctorCommand": {
         "type": "object",
         "additionalProperties": false,
@@ -1368,6 +1480,11 @@
           },
           "degree": {
             "type": "string",
+            "nullable": true
+          },
+          "departmentID": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         }
@@ -1390,6 +1507,11 @@
           },
           "degree": {
             "type": "string",
+            "nullable": true
+          },
+          "departmentID": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         }

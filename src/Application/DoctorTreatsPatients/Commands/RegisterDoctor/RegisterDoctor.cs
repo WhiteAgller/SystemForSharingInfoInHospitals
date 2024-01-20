@@ -13,6 +13,7 @@ public record RegisterDoctorCommand : IRequest<int>
     public string? Name { get; init; }
     public string? Surname { get; init; }
     public string? Degree { get; init; }
+    public int? DepartmentID { get; init; }
 }
 
 public class RegisterDoctorCommandHandler : IRequestHandler<RegisterDoctorCommand, int>
