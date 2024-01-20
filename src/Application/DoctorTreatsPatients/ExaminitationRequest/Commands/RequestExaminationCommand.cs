@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Entities;
 using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Events.ExaminitaionRequest;
@@ -11,6 +13,16 @@ public record RequestExaminationCommand : IRequest<int>
     public int ToDepartmentId { get; set; }
 
     public string ToSpecializedWorkplace { get; set; } = null!;
+}
+
+public class RequestExaminationController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> RequestExamination(RequestExaminationCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
 }
 
 public class RequestExaminationCommandHandler(IApplicationDbContext context)

@@ -10,7 +10,7 @@ public class ExaminationCompletedEventHandler(ILogger logger)
     public Task Handle(ExaminationCompletedEvent notification, CancellationToken cancellationToken)
     {
         logger.LogInformation("Domain Event: {DomainEvent}", notification.GetType().Name);
-
+        
         return Task.CompletedTask;
     }
 }

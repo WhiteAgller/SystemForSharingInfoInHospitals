@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 
-namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.UpdateDoctor;
+namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Doctor.Commands;
 public record UpdateDoctorCommand : IRequest
 {
     public int Id { get; init; }
@@ -15,6 +12,15 @@ public record UpdateDoctorCommand : IRequest
     public int? DepartmentID { get; set; }
 }
 
+public class UpdateDoctorController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> UpdateDoctor(UpdateDoctorCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
+}
 public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand>
 {
     private readonly IApplicationDbContext _context;
@@ -34,6 +40,7 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand>
         entity.Name = request.Name;
         entity.Surname = request.Surname;
         entity.Degree = request.Degree;
+        entity.DepartmentId = request.DepartmentID;
 
         await _context.SaveChangesAsync(cancellationToken);
     }

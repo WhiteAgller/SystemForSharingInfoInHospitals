@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
-using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 using SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;
 
-namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.RegisterDoctor;
+namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Doctor.Commands;
 public record RegisterDoctorCommand : IRequest<int>
 {
     public string Name { get; init; } = null!;
     public string? Surname { get; init; }
     public string? Degree { get; init; }
     public int? DepartmentID { get; init; }
+}
+
+public class RegisterDoctorController : ApiControllerBase
+{
+    [HttpPost]
+    public async Task<ActionResult<int>> RegisterDoctor(RegisterDoctorCommand command)
+    {
+        return await Mediator.Send(command);
+    }
 }
 
 public class RegisterDoctorCommandHandler : IRequestHandler<RegisterDoctorCommand, int>
@@ -27,7 +32,7 @@ public class RegisterDoctorCommandHandler : IRequestHandler<RegisterDoctorComman
 
     public async Task<int> Handle(RegisterDoctorCommand request, CancellationToken cancellationToken)
     {
-        var entity = new Doctor
+        var entity = new Domain.Entities.DoctorTreatsPatients.Doctor
         {
             Name = request.Name,
             Surname = request.Surname,

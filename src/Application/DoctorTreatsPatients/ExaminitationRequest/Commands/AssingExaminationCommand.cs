@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 
 namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.ExaminitationRequest.Commands;
@@ -9,8 +11,17 @@ public record AssignExaminationCommand : IRequest
     public int DoctorId { get; set; }
 }
 
+public class AssignExaminationController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> AssignExamination(AssignExaminationCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
+}
 
-public class ReschedulePatientCommandHandler(IApplicationDbContext context) : IRequestHandler<AssignExaminationCommand>
+public class AssignExaminationCommandHandler(IApplicationDbContext context) : IRequestHandler<AssignExaminationCommand>
 {
     public async Task Handle(AssignExaminationCommand request, CancellationToken cancellationToken)
     {

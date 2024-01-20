@@ -1,4 +1,6 @@
-﻿using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
+using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.ValueObjects;
 using SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;
 
@@ -8,6 +10,15 @@ public record CreateDepartmentCommand : IRequest<int>
     public string Name { get; init; } = null!;
     public string? Description { get; init; }
     public List<SpecializedWorkplace> SpecializedWorkplaces { get; set; } = new List<SpecializedWorkplace>();
+}
+
+public class CreateDepartmentController : ApiControllerBase
+{
+    [HttpPost]
+    public async Task<ActionResult<int>> ScheudleAppointment(CreateDepartmentCommand command)
+    {
+        return await Mediator.Send(command);
+    }
 }
 
 public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCommand, int>

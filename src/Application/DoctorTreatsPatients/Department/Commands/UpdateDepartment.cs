@@ -1,4 +1,6 @@
-﻿using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
+using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.ValueObjects;
 
 namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Department.Commands;
@@ -8,6 +10,16 @@ public record UpdateDepartmentCommand : IRequest
     public string Name { get; init; } = null!;
     public string? Description { get; init; }
     public List<SpecializedWorkplace> SpecializedWorkplaces { get; set; } = new List<SpecializedWorkplace>();
+}
+
+public class UpdateDepartmentController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> UpdateDepartment(UpdateDepartmentCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
 }
 
 public class UpdateDepartmentCommandHandler : IRequestHandler<UpdateDepartmentCommand>
