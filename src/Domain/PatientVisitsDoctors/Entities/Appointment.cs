@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using SystemForSharingInfoInHospitals.Domain.PatientVisitsDoctors.Enums;
 
 namespace SystemForSharingInfoInHospitals.Domain.Entities;
 

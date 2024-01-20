@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
-using SystemForSharingInfoInHospitals.Domain.Enums;
+using SystemForSharingInfoInHospitals.Domain.PatientVisitsDoctors.Enums;
 
 namespace SystemForSharingInfoInHospitals.Application.Appointments.Commands;
 

@@ -5,7 +5,7 @@ using SystemForSharingInfoInHospitals.Domain.ValueObjects;
 
 namespace SystemForSharingInfoInHospitals.Infrastructure.Data.Configurations;
 
-public class TodoListConfiguration : IEntityTypeConfiguration<Patient>
+public class PatientConfiguration : IEntityTypeConfiguration<Patient>
 {
     public void Configure(EntityTypeBuilder<Patient> builder)
     {

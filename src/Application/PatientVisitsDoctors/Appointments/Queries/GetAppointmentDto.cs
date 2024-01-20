@@ -1,5 +1,5 @@
 using SystemForSharingInfoInHospitals.Domain.Entities;
-using SystemForSharingInfoInHospitals.Domain.Enums;
+using SystemForSharingInfoInHospitals.Domain.PatientVisitsDoctors.Enums;
 
 namespace SystemForSharingInfoInHospitals.Application.Appointments.Queries;
 

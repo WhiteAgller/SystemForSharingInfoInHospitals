@@ -3,7 +3,6 @@ using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Application.Patients.Queries;
 using SystemForSharingInfoInHospitals.Domain.Entities;
-using SystemForSharingInfoInHospitals.Domain.Enums;
 
 namespace SystemForSharingInfoInHospitals.Application.Appointments.Queries;
 

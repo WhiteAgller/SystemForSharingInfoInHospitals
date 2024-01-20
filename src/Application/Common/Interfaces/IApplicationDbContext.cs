@@ -1,4 +1,5 @@
 ﻿using SystemForSharingInfoInHospitals.Domain.Entities;
+using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 
 namespace SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 
