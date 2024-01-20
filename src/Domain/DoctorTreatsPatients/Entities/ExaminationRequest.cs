@@ -11,4 +11,6 @@ public class ExaminationRequest : BaseAuditableEntity
     public string ToSpecializedWorkplace { get; set; } = null!;
     
     public bool IsFinished { get; set; }
+
+    public string Result { get; set; } = null!;
 }
