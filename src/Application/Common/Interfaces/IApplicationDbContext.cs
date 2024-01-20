@@ -9,8 +9,9 @@ public interface IApplicationDbContext
     DbSet<HoursPerDay> HoursPerDays { get; }
     DbSet<Department> Departments { get; }
 
-    DbSet<TodoList> TodoLists { get; }
-    DbSet<TodoItem> TodoItems { get; }
+    DbSet<Patient> Patients { get; }
+    
+    DbSet<Appointment> Appointments { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

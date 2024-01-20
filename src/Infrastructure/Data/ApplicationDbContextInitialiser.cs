@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SystemForSharingInfoInHospitals.Domain.ValueObjects;
 
 namespace SystemForSharingInfoInHospitals.Infrastructure.Data;
 
@@ -89,18 +90,31 @@ public class ApplicationDbContextInitialiser
 
         // Default data
         // Seed, if necessary
-        if (!_context.TodoLists.Any())
+        if (!_context.Patients.Any())
         {
-            _context.TodoLists.Add(new TodoList
+            _context.Patients.Add(new Patient()
             {
-                Title = "Todo List",
-                Items =
+                Id = 1,
+                Name = "John Doe",
+                Alergies = new List<Alergy>()
                 {
-                    new TodoItem { Title = "Make a todo list 📃" },
-                    new TodoItem { Title = "Check off the first item ✅" },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯"},
-                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆" },
-                }
+                    Alergy.AllergicAsthma,
+                    Alergy.HayFever
+                },
+                MedicalRecord = new MedicalRecord()
+                {
+                    PatientId = 1,
+                    Difficulties = new List<Difficulty>()
+                    {
+                        new Difficulty()
+                        {
+                            DoctorId = 1,
+                            Diagnosis = "Stomachache",
+                            TreatmentPlan = ""
+                        }
+                    }
+                },
+                DateOfBirth = new DateTime(1980, 1,1)
             });
 
             await _context.SaveChangesAsync();

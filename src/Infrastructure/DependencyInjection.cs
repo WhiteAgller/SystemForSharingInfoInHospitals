@@ -1,14 +1,16 @@
-﻿using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SystemForSharingInfoInHospitals.Application;
+using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Constants;
 using SystemForSharingInfoInHospitals.Infrastructure.Data;
 using SystemForSharingInfoInHospitals.Infrastructure.Data.Interceptors;
 using SystemForSharingInfoInHospitals.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.Configuration;
 
-namespace Microsoft.Extensions.DependencyInjection;
+namespace SystemForSharingInfoInHospitals.Infrastructure;
 
 public static class DependencyInjection
 {
@@ -31,7 +33,7 @@ public static class DependencyInjection
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
         services.AddScoped<ApplicationDbContextInitialiser>();
-
+        
         services.AddAuthentication()
             .AddBearerToken(IdentityConstants.BearerScheme);
 
@@ -45,10 +47,13 @@ public static class DependencyInjection
 
         services.AddSingleton(TimeProvider.System);
         services.AddTransient<IIdentityService, IdentityService>();
-
+        
         services.AddAuthorization(options =>
-            options.AddPolicy(Policies.CanPurge, policy => policy.RequireRole(Roles.Administrator)));
+            options.AddPolicy(Policies.UpdateDiagnose, policy => policy.RequireRole(Roles.Doctor)));
 
+        services.AddApplicationServices();
+        services.AddScoped<IUser, CurrentUser>();
+        
         return services;
     }
 }
