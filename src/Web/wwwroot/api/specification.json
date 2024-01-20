@@ -753,6 +753,128 @@
           }
         ]
       }
+    },
+    "/api/Doctors": {
+      "post": {
+        "tags": [
+          "Doctors"
+        ],
+        "operationId": "RegisterDoctor",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDoctorCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Doctors/{id}": {
+      "put": {
+        "tags": [
+          "Doctors"
+        ],
+        "operationId": "UpdateDoctor",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDoctorCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/Doctors/SetOfficeHours/{id}": {
+      "put": {
+        "tags": [
+          "Doctors"
+        ],
+        "operationId": "SetOfficeHours",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetOfficeHoursCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -1231,6 +1353,164 @@
             "nullable": true
           }
         }
+      },
+      "RegisterDoctorCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "degree": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateDoctorCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "degree": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SetOfficeHoursCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "officeHours": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HoursPerDay"
+            }
+          }
+        }
+      },
+      "HoursPerDay": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "doctorId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "dayOfWeek": {
+                "$ref": "#/components/schemas/DayOfWeek"
+              },
+              "start": {
+                "type": "string",
+                "format": "time"
+              },
+              "end": {
+                "type": "string",
+                "format": "time"
+              }
+            }
+          }
+        ]
+      },
+      "DayOfWeek": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "BaseAuditableEntity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "lastModifiedBy": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BaseEntity": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "domainEvents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseEvent"
+            }
+          }
+        }
+      },
+      "BaseEvent": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false
       }
     },
     "securitySchemes": {
