@@ -1,5 +1,4 @@
 ﻿using SystemForSharingInfoInHospitals.Domain.Entities;
-using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 
 namespace SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 
@@ -9,8 +8,7 @@ public interface IApplicationDbContext
     DbSet<HoursPerDay> HoursPerDays { get; }
     DbSet<Department> Departments { get; }
 
-    DbSet<TodoList> TodoLists { get; }
-    DbSet<TodoItem> TodoItems { get; }
+    DbSet<Patient> Patients { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

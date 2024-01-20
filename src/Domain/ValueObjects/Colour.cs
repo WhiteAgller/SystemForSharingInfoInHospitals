@@ -21,7 +21,7 @@ public class Colour : ValueObject
 
         if (!SupportedColours.Contains(colour))
         {
-            throw new UnsupportedColourException(code);
+            throw new Exception(code);
         }
 
         return colour;
