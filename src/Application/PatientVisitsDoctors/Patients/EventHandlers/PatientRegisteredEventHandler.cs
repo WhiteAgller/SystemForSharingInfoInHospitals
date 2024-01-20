@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Logging;
 using SystemForSharingInfoInHospitals.Domain.Events;
 
-namespace SystemForSharingInfoInHospitals.Application.Patients.EventHandlers;
+namespace SystemForSharingInfoInHospitals.Application.PatientVisitsDoctors.Patients.EventHandlers;
 
 public class PatientRegisteredEventHandler(ILogger<PatientRegisteredEvent> logger)
     : INotificationHandler<PatientRegisteredEvent>

@@ -15,9 +15,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80034d81-6ed1-4135-8dc8-5b871871a95a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/DoctorTreatsPatients/Departments.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/DoctorTreatsPatients/Doctors.cs" beforeDir="false" />
+    <list default="true" id="80034d81-6ed1-4135-8dc8-5b871871a95a" name="Changes" comment="feat: added controllers">
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/DepartmentConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentsForPatinet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentsForPatinetQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/EventHandlers/PatientRegisteredEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/EventHandlers/PatientRegisteredEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatientQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatients.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatientsQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +47,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/484917e236e092d5ce76c5f373993d21fb07a86c2912aaaec5db139b77ac48/SwaggerGenServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64274010236a347223a5cac7c0d6d95cc3af6022a9d2c8625e2c8bb5317f8/ISaveChangesInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Application/Common/Interfaces/IApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/Common/Interfaces/IApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Application/Common/Interfaces/IApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Application/MedicalRecords/Commands/AddDiagnosis.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Infrastructure/Data/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Application/DoctorTreatsPatients/ExaminitationRequest/Commands/AssingExaminationCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Domain/DoctorTreatsPatients/Entities/Department.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/Data/Migrations/00000000000000_InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/DependencyInjection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -122,7 +126,31 @@
       <option name="project" value="LOCAL" />
       <updated>1705761757658</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: added ExaminationRequest">
+      <option name="closed" value="true" />
+      <created>1705770207644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705770207644</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: added result to ExaminationRequest">
+      <option name="closed" value="true" />
+      <created>1705770443887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705770443887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: added controllers">
+      <option name="closed" value="true" />
+      <created>1705771218375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705771218375</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +161,9 @@
     <MESSAGE value="feat: added architecutre pdf" />
     <MESSAGE value="chore: renaming projects" />
     <MESSAGE value="chore: renaming projects back (:" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="feat: added ExaminationRequest" />
+    <MESSAGE value="fix: added result to ExaminationRequest" />
+    <MESSAGE value="feat: added controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added controllers" />
   </component>
 </project>

@@ -3,7 +3,7 @@ using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Events.Examini
 
 namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.ExaminitationRequest.EventHandlers;
 
-public class ExaminationCompletedEventHandler(ILogger logger)
+public class ExaminationCompletedEventHandler(ILogger<ExaminationCompletedEvent> logger)
     : INotificationHandler<ExaminationCompletedEvent>
 {
 
