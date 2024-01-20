@@ -11,8 +11,6 @@
 
   <ItemGroup>
     <Folder Include="DoctorTreatsPatients\Enums\" />
-    <Folder Include="DoctorTreatsPatients\Events\ExaminitaionRequest\" />
-    <Folder Include="DoctorTreatsPatients\ValueObjects\" />
     <Folder Include="PatientVisitsDoctors\Events\" />
   </ItemGroup>
 

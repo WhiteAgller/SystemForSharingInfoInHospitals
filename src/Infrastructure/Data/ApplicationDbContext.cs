@@ -4,6 +4,7 @@ using SystemForSharingInfoInHospitals.Domain.Entities;
 using SystemForSharingInfoInHospitals.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Entities;
 using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 
 namespace SystemForSharingInfoInHospitals.Infrastructure.Data;
@@ -20,6 +21,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
     public DbSet<HoursPerDay> HoursPerDays => Set<HoursPerDay>();
 
     public DbSet<Department> Departments => Set<Department>();
+
+    public DbSet<ExaminationRequest> ExaminationRequests => Set<ExaminationRequest>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

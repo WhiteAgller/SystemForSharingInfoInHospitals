@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Entities;
 using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 
 namespace SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;

@@ -22,6 +22,9 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Folder Include="DoctorTreatsPatients\Department\Queries\" />
+    <Folder Include="DoctorTreatsPatients\Doctor\Queries\" />
+    <Folder Include="DoctorTreatsPatients\ExaminitationRequest\Queries\" />
     <Folder Include="PatientVisitsDoctors\" />
   </ItemGroup>
 

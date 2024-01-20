@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.Entities;
 using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
 
 namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.UpdateDoctor;

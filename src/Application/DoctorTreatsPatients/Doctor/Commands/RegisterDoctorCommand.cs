@@ -10,7 +10,7 @@ using SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;
 namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.RegisterDoctor;
 public record RegisterDoctorCommand : IRequest<int>
 {
-    public string? Name { get; init; }
+    public string Name { get; init; } = null!;
     public string? Surname { get; init; }
     public string? Degree { get; init; }
     public int? DepartmentID { get; init; }

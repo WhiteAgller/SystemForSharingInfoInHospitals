@@ -9,7 +9,7 @@ namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Comma
 public record UpdateDoctorCommand : IRequest
 {
     public int Id { get; init; }
-    public string? Name { get; init; }
+    public string Name { get; init; } = null!;
     public string? Surname { get; init; }
     public string? Degree { get; init; }
     public int? DepartmentID { get; set; }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;
 
-namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.EventHandlers;
+namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Department.EventHandlers;
 public class DepartmentCreatedEventHandler : INotificationHandler<DepartmentCreatedEvent>
 {
     private readonly ILogger<DepartmentCreatedEventHandler> _logger;

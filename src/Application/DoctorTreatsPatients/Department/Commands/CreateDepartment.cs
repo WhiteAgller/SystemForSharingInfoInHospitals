@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
-using SystemForSharingInfoInHospitals.Domain.Entities.DoctorTreatsPatients;
+﻿using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.ValueObjects;
 using SystemForSharingInfoInHospitals.Domain.Events.DoctorTreatsPatients;
 
-namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.CreateDepartment;
+namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Department.Commands;
 public record CreateDepartmentCommand : IRequest<int>
 {
-    public string? Name { get; init; }
+    public string Name { get; init; } = null!;
     public string? Description { get; init; }
+    public List<SpecializedWorkplace> SpecializedWorkplaces { get; set; } = new List<SpecializedWorkplace>();
 }
 
 public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCommand, int>
@@ -25,10 +21,11 @@ public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCo
 
     public async Task<int> Handle(CreateDepartmentCommand request, CancellationToken cancellationToken)
     {
-        var entity = new Department
+        var entity = new Domain.DoctorTreatsPatients.Entities.Department()
         {
             Name = request.Name,
-            Description = request.Description
+            Description = request.Description,
+            SpecializedWorkplaces = request.SpecializedWorkplaces
         };
 
         entity.AddDomainEvent(new DepartmentCreatedEvent(entity));

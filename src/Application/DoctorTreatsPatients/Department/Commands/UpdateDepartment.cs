@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+﻿using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
+using SystemForSharingInfoInHospitals.Domain.DoctorTreatsPatients.ValueObjects;
 
-namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Commands.UpdateDepartment;
+namespace SystemForSharingInfoInHospitals.Application.DoctorTreatsPatients.Department.Commands;
 public record UpdateDepartmentCommand : IRequest
 {
     public int Id { get; init; }
-    public string? Name { get; init; }
+    public string Name { get; init; } = null!;
     public string? Description { get; init; }
+    public List<SpecializedWorkplace> SpecializedWorkplaces { get; set; } = new List<SpecializedWorkplace>();
 }
 
 public class UpdateDepartmentCommandHandler : IRequestHandler<UpdateDepartmentCommand>
@@ -28,9 +25,10 @@ public class UpdateDepartmentCommandHandler : IRequestHandler<UpdateDepartmentCo
             .FindAsync(new object[] { request.Id }, cancellationToken);
 
         Guard.Against.NotFound(request.Id, entity);
-
+        
         entity.Name = request.Name;
         entity.Description = request.Description;
+        entity.SpecializedWorkplaces = request.SpecializedWorkplaces;
 
         await _context.SaveChangesAsync(cancellationToken);
     }
