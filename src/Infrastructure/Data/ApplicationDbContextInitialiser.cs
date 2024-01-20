@@ -103,9 +103,16 @@ public class ApplicationDbContextInitialiser
                 },
                 MedicalRecord = new MedicalRecord()
                 {
-                    Diagnosis = "Color blind",
-                    TreatmentPlan = "",
-                    PatientId = 1
+                    PatientId = 1,
+                    History = new List<History>()
+                    {
+                        new History()
+                        {
+                            DoctorId = 1,
+                            Diagnosis = "Stomachache",
+                            TreatmentPlan = ""
+                        }
+                    }
                 },
                 DateOfBirth = new DateTime(1980, 1,1)
             });

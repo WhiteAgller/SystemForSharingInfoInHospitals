@@ -12,10 +12,10 @@ public record GetPatientsQuery : IRequest<PaginatedList<GetPatientDto>>
     public int PageSize { get; init; } = 10;
 }
 
-public partial class PatientController : ApiControllerBase
+public class PatientGetAllController : ApiControllerBase
 {
     [HttpGet]
-    public async Task<PaginatedList<GetPatientDto>> RegisterPatient([FromQuery]GetPatientsQuery query)
+    public async Task<PaginatedList<GetPatientDto>> GetAllPatients([FromQuery]GetPatientsQuery query)
     {
         return await Mediator.Send(query);
     }

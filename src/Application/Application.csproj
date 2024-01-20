@@ -20,11 +20,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="MedicalRecords\Commands\" />
-    <Folder Include="MedicalRecords\EventHandlers\" />
-    <Folder Include="MedicalRecords\Queries\" />
-  </ItemGroup>
 
 </Project>

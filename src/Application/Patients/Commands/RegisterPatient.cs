@@ -10,9 +10,7 @@ namespace SystemForSharingInfoInHospitals.Application.Patients.Commands;
 public record RegisterPatientCommand : IRequest<int>
 {
     public string Name { get; set; } = null!;
-
     public DateTime DateOfBirth { get; set; }
-
     public IEnumerable<Alergy> Alergies { get; set; } = new List<Alergy>();
 
     public MedicalRecordCreate MedicalRecordCreate { get; set; } = new();
@@ -36,8 +34,7 @@ public class RegisterPatientCommandHandler(IApplicationDbContext context) : IReq
             Name = request.Name,
             MedicalRecord = new MedicalRecord()
             {   
-                Diagnosis = request.MedicalRecordCreate.Diagnosis,
-                TreatmentPlan = request.MedicalRecordCreate.TreatmentPlan
+               History = new List<History>()
             },
             DateOfBirth = request.DateOfBirth,
             Alergies = request.Alergies,
