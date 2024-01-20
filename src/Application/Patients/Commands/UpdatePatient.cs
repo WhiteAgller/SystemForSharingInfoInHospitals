@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Entities;
 using SystemForSharingInfoInHospitals.Domain.ValueObjects;
@@ -15,6 +17,16 @@ public record UpdatePatientCommand : IRequest
     public IEnumerable<Alergy> Alergies { get; set; } = new List<Alergy>();
 
     public MedicalRecord MedicalRecord { get; set; } = new();
+}
+
+public class UpdatePatientController : ApiControllerBase
+{
+    [HttpPut]
+    public async Task<ActionResult> UpdatePatient(UpdatePatientCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
 }
 
 public class UpdatePatientCommandHandler(IApplicationDbContext context) : IRequestHandler<UpdatePatientCommand>

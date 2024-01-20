@@ -1,9 +1,21 @@
+using Microsoft.AspNetCore.Mvc;
+using SystemForSharingInfoInHospitals.Application.Common;
 using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 using SystemForSharingInfoInHospitals.Domain.Events;
 
 namespace SystemForSharingInfoInHospitals.Application.Patients.Commands;
 
 public record DeletePatientCommand(int Id) : IRequest;
+
+public class DeletePatientController : ApiControllerBase
+{
+    [HttpDelete]
+    public async Task<ActionResult<int>> DeletePatient(DeletePatientCommand command)
+    {
+        await Mediator.Send(command);
+        return Ok();
+    }
+}
 
 public class DeletePatientCommandHandler(IApplicationDbContext context) : IRequestHandler<DeletePatientCommand>
 {

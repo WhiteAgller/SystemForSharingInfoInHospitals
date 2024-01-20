@@ -12,125 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="562b2f8c-eb99-46fa-9edf-ccb8d22813a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Common/ApiControllerBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/DeletePatient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/RegisterPatient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/UpdatePatient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientRegistered.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientUpdated.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatientDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatients.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Entities/Appointment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Entities/MedicalRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Entities/Patient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Enums/Status.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Events/PatientDeletedEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Events/PatientRegisteredEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Events/PatientUpdatedEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/ValueObjects/Alergy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/PatientConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Identity/CurrentUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WebApi/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SystemForSharingInfoInHospitals.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SystemForSharingInfoInHospitals.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Common/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Models/LookupDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/CreateTodoItem/CreateTodoItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/CreateTodoItem/CreateTodoItemCommandValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/DeleteTodoItem/DeleteTodoItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/UpdateTodoItem/UpdateTodoItemCommandValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Commands/UpdateTodoItemDetail/UpdateTodoItemDetail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/EventHandlers/TodoItemCompletedEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/EventHandlers/TodoItemCreatedEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Queries/GetTodoItemsWithPagination/GetTodoItemsWithPagination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Queries/GetTodoItemsWithPagination/GetTodoItemsWithPaginationQueryValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoItems/Queries/GetTodoItemsWithPagination/TodoItemBriefDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/CreateTodoList/CreateTodoList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/CreateTodoList/CreateTodoListCommandValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/DeleteTodoList/DeleteTodoList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/PurgeTodoLists/PurgeTodoLists.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/UpdateTodoList/UpdateTodoList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Commands/UpdateTodoList/UpdateTodoListCommandValidator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Queries/GetTodos/GetTodos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Queries/GetTodos/TodoItemDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Queries/GetTodos/TodoListDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/TodoLists/Queries/GetTodos/TodosVm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/WeatherForecasts/Queries/GetWeatherForecasts/GetWeatherForecastsQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/WeatherForecasts/Queries/GetWeatherForecasts/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Constants/Policies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Constants/Policies.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Constants/Roles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Constants/Roles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/TodoItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entities/TodoList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Enums/PriorityLevel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Events/TodoItemCompletedEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Events/TodoItemCreatedEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Events/TodoItemDeletedEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Exceptions/UnsupportedColourException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/GlobalUsings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/GlobalUsings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ValueObjects/Colour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ValueObjects/Colour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Commands/DeletePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/DeletePatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Commands/UpdatePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Commands/UpdatePatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientRegistered.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientRegistered.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientUpdated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/EventHandlers/PatientUpdated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatientDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatients.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Patients/Queries/GetPatients.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContextInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContextInitialiser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/TodoItemConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/TodoListConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/DependencyInjection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/TodoItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/TodoLists.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/Users.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Endpoints/WeatherForecasts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Infrastructure/CustomExceptionHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Infrastructure/EndpointGroupBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Infrastructure/IEndpointRouteBuilderExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Infrastructure/MethodInfoExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Infrastructure/WebApplicationExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Pages/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Pages/Error.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Pages/Shared/_LoginPartial.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Pages/_ViewImports.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Services/CurrentUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Web.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/Web.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/config.nswag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/wwwroot/api/specification.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Web/wwwroot/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/Application.FunctionalTests.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/BaseTestFixture.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/CustomWebApplicationFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/ITestDatabase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/SqlServerTestDatabase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TestDatabaseFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TestcontainersTestDatabase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/Testing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoItems/Commands/CreateTodoItemTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoItems/Commands/DeleteTodoItemTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoItems/Commands/UpdateTodoItemDetailTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoItems/Commands/UpdateTodoItemTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoLists/Commands/CreateTodoListTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoLists/Commands/DeleteTodoListTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoLists/Commands/PurgeTodoListsTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoLists/Commands/UpdateTodoListTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/TodoLists/Queries/GetTodosTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.FunctionalTests/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.UnitTests/Application.UnitTests.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.UnitTests/Common/Behaviours/RequestLoggerTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.UnitTests/Common/Exceptions/ValidationExceptionTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application.UnitTests/Common/Mappings/MappingTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Domain.UnitTests/Domain.UnitTests.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Domain.UnitTests/ValueObjects/ColourTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Infrastructure.IntegrationTests/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Infrastructure.IntegrationTests/Infrastructure.IntegrationTests.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,9 +42,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/3f1acb59718cadf111a0a796681e3d3509bb3381/src/Security/Authorization/Core/src/AuthorizationOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b8a0/fb/9011c843/ConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/975bf429da2a47c2b8081c008d18db0b40600/78/5fdcbb0e/IMapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e23e10ab6afa4a6f924e0f679b292c34c800/82/0ab240e1/SwaggerGenServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/139d5b9169777742af1f8d11e54ff2e21b3c3b6e3db2a91c87ea21994d7/Extensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/484917e236e092d5ce76c5f373993d21fb07a86c2912aaaec5db139b77ac48/SwaggerGenServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64274010236a347223a5cac7c0d6d95cc3af6022a9d2c8625e2c8bb5317f8/ISaveChangesInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Infrastructure/Data/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -166,31 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Web: IIS Express.executor": "Debug",
-    ".NET Launch Settings Profile.Web: SystemForSharingInfoInHospitals.Web.executor": "Debug",
-    ".NET Launch Settings Profile.WebApi: http.executor": "Debug",
-    ".NET Launch Settings Profile.WebApi: https.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "PatientVisitsDoctor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Web: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Web: SystemForSharingInfoInHospitals.Web.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.WebApi: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.WebApi: https.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PatientVisitsDoctor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\aglle\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\aglle\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: http">
     <configuration name="WebApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/WebApi/WebApi.csproj" />
@@ -266,7 +164,10 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
@@ -290,8 +191,19 @@
       <workItem from="1705591466551" duration="2931000" />
       <workItem from="1705624479378" duration="956000" />
       <workItem from="1705695702535" duration="1176000" />
-      <workItem from="1705696889800" duration="13815000" />
+      <workItem from="1705696889800" duration="14027000" />
+      <workItem from="1705711591447" duration="2495000" />
+      <workItem from="1705745082529" duration="3539000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: project setup and added register patient">
+      <option name="closed" value="true" />
+      <created>1705711429648</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705711429648</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,5 +212,7 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: project setup and added register patient" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: project setup and added register patient" />
   </component>
 </project>

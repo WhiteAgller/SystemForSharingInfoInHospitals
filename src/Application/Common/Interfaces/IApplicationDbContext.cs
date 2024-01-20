@@ -9,6 +9,8 @@ public interface IApplicationDbContext
     DbSet<Department> Departments { get; }
 
     DbSet<Patient> Patients { get; }
+    
+    DbSet<Appointment> Appointments { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

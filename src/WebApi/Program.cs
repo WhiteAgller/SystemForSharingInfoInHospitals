@@ -1,7 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
 using SystemForSharingInfoInHospitals.Application;
 using SystemForSharingInfoInHospitals.Infrastructure;
+using SystemForSharingInfoInHospitals.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +31,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.MapControllers();
+
+using var scope = ((IApplicationBuilder)app).ApplicationServices.CreateScope();
+using var context = scope.ServiceProvider.GetService<ApplicationDbContext>();
+context?.Database.EnsureCreated();
+context?.Database.Migrate();
+
 app.Run();
 
