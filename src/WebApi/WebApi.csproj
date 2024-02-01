@@ -10,6 +10,10 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" />
     </ItemGroup>
 
@@ -20,10 +24,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Appointments\Appointments.csproj" />
-      <ProjectReference Include="..\HospitalManagement\HospitalManagement.csproj" />
-      <ProjectReference Include="..\PatientManagement\PatientManagement.csproj" />
-      <ProjectReference Include="..\SpecializedExaminations\SpecializedExaminations.csproj" />
+      <ProjectReference Include="..\Appointment\Appointment.csproj" />
+      <ProjectReference Include="..\Hospital\Hospital.csproj" />
+      <ProjectReference Include="..\Patient\Patient.csproj" />
+      <ProjectReference Include="..\SpecializedExamination\SpecializedExamination.csproj" />
     </ItemGroup>
 
 </Project>

@@ -20,13 +20,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{A56F7876-281C-4D57-BE71-40863302617E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appointments", "src\Appointments\Appointments.csproj", "{5C2462C0-8E81-48CF-840E-ACFF16E037F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appointment", "src\Appointment\Appointment.csproj", "{5C2462C0-8E81-48CF-840E-ACFF16E037F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagement", "src\HospitalManagement\HospitalManagement.csproj", "{8CD56B13-89DD-4826-A516-F124A585DEBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "src\Hospital\Hospital.csproj", "{8CD56B13-89DD-4826-A516-F124A585DEBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagement", "src\PatientManagement\PatientManagement.csproj", "{9F03B8C9-DFCC-4B6A-8FD4-821133BCD38C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient", "src\Patient\Patient.csproj", "{9F03B8C9-DFCC-4B6A-8FD4-821133BCD38C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecializedExaminations", "src\SpecializedExaminations\SpecializedExaminations.csproj", "{7B7D2628-C78C-4F51-A192-1177C44ACD4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecializedExamination", "src\SpecializedExamination\SpecializedExamination.csproj", "{7B7D2628-C78C-4F51-A192-1177C44ACD4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "src\Common\Common.csproj", "{3D60D020-2191-49FB-BF2E-986967364348}"
 EndProject

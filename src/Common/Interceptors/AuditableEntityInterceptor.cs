@@ -2,20 +2,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using SystemForSharingInfoInHospitals.Application.Common.Interfaces;
 
 namespace Common.Interceptors;
 
 public class AuditableEntityInterceptor : SaveChangesInterceptor
 {
-    private readonly IUser _user;
     private readonly TimeProvider _dateTime;
 
     public AuditableEntityInterceptor(
-        IUser user,
         TimeProvider dateTime)
     {
-        _user = user;
         _dateTime = dateTime;
     }
 
@@ -41,13 +37,13 @@ public class AuditableEntityInterceptor : SaveChangesInterceptor
         {
             if (entry.State == EntityState.Added)
             {
-                entry.Entity.CreatedBy = _user.Id;
+                entry.Entity.CreatedBy = "System";
                 entry.Entity.Created = _dateTime.GetUtcNow();
             } 
 
             if (entry.State == EntityState.Added || entry.State == EntityState.Modified || entry.HasChangedOwnedEntities())
             {
-                entry.Entity.LastModifiedBy = _user.Id;
+                entry.Entity.LastModifiedBy = "System";
                 entry.Entity.LastModified = _dateTime.GetUtcNow();
             }
         }

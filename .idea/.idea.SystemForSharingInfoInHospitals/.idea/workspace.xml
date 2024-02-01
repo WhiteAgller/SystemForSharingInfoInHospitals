@@ -15,132 +15,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80034d81-6ed1-4135-8dc8-5b871871a95a" name="Changes" comment="fix: pipelien">
-      <change afterPath="$PROJECT_DIR$/src/Appointments/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/AppointmentDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/AppointmentDbContextInitialiser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/IAppointmentDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HospitalManagement/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/HospitalManagementDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/HospitalManagementDbContextInitialiser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/IHospitalManagementDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PatientManagement/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/IPatientManagementDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/PatientManagementDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/PatientManagementDbContextInitialiser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SpecializedExaminations/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/ISpecializedExaminationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/SpecializedExaminationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/SpecializedExaminationDbContextInitialiser.cs" afterDir="false" />
+    <list default="true" id="80034d81-6ed1-4135-8dc8-5b871871a95a" name="Changes" comment="refactor: refactored based on the last review">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemForSharingInfoInHospitals/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SystemForSharingInfoInHospitals.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SystemForSharingInfoInHospitals.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Application.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/ApiControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/ApiControllerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Behaviours/AuthorizationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/AuthorizationBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Behaviours/LoggingBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/LoggingBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Behaviours/PerformanceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/PerformanceBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Behaviours/UnhandledExceptionBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/UnhandledExceptionBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Behaviours/ValidationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/ValidationBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Exceptions/ForbiddenAccessException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Exceptions/ForbiddenAccessException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Exceptions/ValidationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Exceptions/ValidationException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Interfaces/IApplicationDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Interfaces/IIdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Interfaces/IIdentityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Interfaces/IUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Interfaces/IUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Mappings/MappingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Mappings/MappingExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Models/PaginatedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Models/PaginatedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Models/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Models/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Common/Security/AuthorizeAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Security/AuthorizeAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Department/Commands/CreateDepartment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/Commands/CreateDepartment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Department/Commands/UpdateDepartment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/Commands/UpdateDepartment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Department/EventHandlers/DepartmentCreatedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/EventHandlers/DepartmentCreatedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Doctor/Commands/RegisterDoctorCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/RegisterDoctorCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Doctor/Commands/SetOfficeHoursCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/SetOfficeHoursCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Doctor/Commands/UpdateDoctorCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/UpdateDoctorCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/Doctor/EventHandlers/DoctorRegisteredEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/EventHandlers/DoctorRegisteredEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/Commands/AssingExaminationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/AssingExaminationCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/Commands/CompleteExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/CompleteExamination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/Commands/RequestExaminationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/RequestExaminationCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/DoctorTreatsPatients/ExaminitationRequest/EventHandlers/ExaminationRequestedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/EventHandlers/ExaminationRequestedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Commands/CancelAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Commands/CancelAppointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Commands/RescheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Commands/RescheduleAppointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Commands/SheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Commands/SheduleAppointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/EventHandlers/AppointmentCancelled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentCancelled.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/EventHandlers/AppointmentRescheduled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentRescheduled.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/EventHandlers/AppointmentScheduled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentScheduled.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Appointments/Queries/GetAppointmentsForPatinetQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentsForPatinetQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/MedicalRecords/Commands/AddDiagnosis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/MedicalRecords/Commands/AddDiagnosis.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/MedicalRecords/EventHandlers/DiagnosisAdded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/MedicalRecords/EventHandlers/DiagnosisAdded.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Commands/DeletePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/DeletePatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Commands/RegisterPatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/RegisterPatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Commands/UpdatePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/UpdatePatient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/EventHandlers/PatientDeletedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientDeletedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/EventHandlers/PatientRegisteredEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientRegisteredEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/EventHandlers/PatientUpdatedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientUpdatedEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatientQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PatientVisitsDoctors/Patients/Queries/GetPatientsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientsQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Common/BaseAuditableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DomainCommon/BaseAuditableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Common/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DomainCommon/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Common/BaseEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DomainCommon/BaseEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Common/ValueObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DomainCommon/ValueObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Constants/Policies.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Constants/Roles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Entities/Department.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/Department.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Entities/Doctor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/Doctor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Entities/ExaminationRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Entities/ExaminationRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Entities/HoursPerDay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/HoursPerDay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/Department/DepartmentCreatedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/Events/DepartmentCreatedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/Doctor/DoctorRegisteredEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/Events/DoctorRegisteredEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/ExaminitaionRequest/ExaminationAssignedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationAssignedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/ExaminitaionRequest/ExaminationCompletedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationCompletedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/ExaminitaionRequest/ExaminationRequestedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationRequestedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/Events/ExaminitaionRequest/ExaminationStartedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationStartedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/DoctorTreatsPatients/ValueObjects/SpecializedWorkplace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Domain/ValueObjects/SpecializedWorkplace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Domain.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Entities/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Domain/Entities/Appointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Entities/MedicalRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Entities/MedicalRecord.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Entities/Patient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Entities/Patient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Enums/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Domain/Enums/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Appointment/AppointmentCancelledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentCancelledEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Appointment/AppointmentRescheduledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentRescheduledEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Appointment/AppointmentScheduledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentScheduledEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/MedicalRecord/DiagnosisAddedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/MedicalRecord/DiagnosisAddedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Patient/PatientDeletedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientDeletedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Patient/PatientRegisteredEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientRegisteredEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/Events/Patient/PatientUpdatedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientUpdatedEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/PatientVisitsDoctors/ValueObjects/Alergy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Domain/ValueObjects/Alergy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/ApplicationDbContextInitialiser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/DepartmentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/Configurations/DepartmentConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/DoctorTreatsPatients/DoctorConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/Configurations/DoctorConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/MedicalRecordConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/Configurations/MedicalRecordConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Configurations/PatientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/Configurations/PatientConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Interceptors/AuditableEntityInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Interceptors/AuditableEntityInterceptor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Interceptors/DispatchDomainEventsInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Interceptors/DispatchDomainEventsInterceptor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/00000000000000_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/00000000000000_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120000344_Init.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120000344_Init.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120130827_addedDifficulties.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120130827_addedDifficulties.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120172954_addedSpecializedWorkplace.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/20240120172954_addedSpecializedWorkplace.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/DependencyInjection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Identity/ApplicationUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Identity/CurrentUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Identity/IdentityResultExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Identity/IdentityService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Infrastructure.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Appointments.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Appointment.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/ConfigureServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Domain/Entities/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Domain/Entities/Appointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Domain/Enums/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Domain/Enums/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentCancelledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Domain/Events/AppointmentCancelledEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentRescheduledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Domain/Events/AppointmentRescheduledEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Domain/Events/AppointmentScheduledEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Domain/Events/AppointmentScheduledEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Commands/CancelAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Commands/CancelAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Commands/RescheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Commands/RescheduleAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Commands/SheduleAppointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Commands/SheduleAppointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentCancelled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/EventHandlers/AppointmentCancelled.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentRescheduled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/EventHandlers/AppointmentRescheduled.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/EventHandlers/AppointmentScheduled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/EventHandlers/AppointmentScheduled.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Queries/GetAppointmentDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Queries/GetAppointmentQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Features/Queries/GetAppointmentsForPatinetQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Features/Queries/GetAppointmentsForPatinetQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/AppointmentDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Infrastructure/Data/AppointmentDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/AppointmentDbContextInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Infrastructure/Data/AppointmentDbContextInitialiser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Appointments/Infrastructure/Data/IAppointmentDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Appointment/Infrastructure/Data/IAppointmentDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Behaviours/AuthorizationBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Behaviours/LoggingBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/LoggingBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Behaviours/PerformanceBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Behaviours/PerformanceBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/ConfigureServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Interceptors/AuditableEntityInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Interceptors/AuditableEntityInterceptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Interfaces/IIdentityService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Interfaces/IUser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/ConfigureServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/Department.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/Entities/Department.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/Doctor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/Entities/Doctor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/Entities/HoursPerDay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/Entities/HoursPerDay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/Events/DepartmentCreatedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/Events/DepartmentCreatedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/Events/DoctorRegisteredEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/Events/DoctorRegisteredEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Domain/ValueObjects/SpecializedWorkplace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Domain/ValueObjects/SpecializedWorkplace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/Commands/CreateDepartment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Department/Commands/CreateDepartment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/Commands/UpdateDepartment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Department/Commands/UpdateDepartment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Department/EventHandlers/DepartmentCreatedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Department/EventHandlers/DepartmentCreatedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/RegisterDoctorCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Doctor/Commands/RegisterDoctorCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/SetOfficeHoursCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Doctor/Commands/SetOfficeHoursCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/Commands/UpdateDoctorCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Doctor/Commands/UpdateDoctorCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Features/Doctor/EventHandlers/DoctorRegisteredEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Features/Doctor/EventHandlers/DoctorRegisteredEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/HospitalManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Hospital.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/Configurations/DepartmentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Infrastructure/Data/Configurations/DepartmentConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/Configurations/DoctorConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Infrastructure/Data/Configurations/DoctorConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/HospitalManagementDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Infrastructure/Data/HospitalDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/HospitalManagementDbContextInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Infrastructure/Data/HospitalDbContextInitialiser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HospitalManagement/Infrastructure/Data/IHospitalManagementDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/Infrastructure/Data/IHospitalDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/ConfigureServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Entities/MedicalRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Entities/MedicalRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Entities/Patient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Entities/Patient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/MedicalRecord/DiagnosisAddedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Events/MedicalRecord/DiagnosisAddedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientDeletedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Events/Patient/PatientDeletedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientRegisteredEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Events/Patient/PatientRegisteredEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/Events/Patient/PatientUpdatedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/Events/Patient/PatientUpdatedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Domain/ValueObjects/Alergy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Domain/ValueObjects/Alergy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/MedicalRecords/Commands/AddDiagnosis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/MedicalRecords/Commands/AddDiagnosis.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/MedicalRecords/EventHandlers/DiagnosisAdded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/MedicalRecords/EventHandlers/DiagnosisAdded.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/DeletePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Commands/DeletePatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/RegisterPatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Commands/RegisterPatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Commands/UpdatePatient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Commands/UpdatePatient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientDeletedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/EventHandlers/PatientDeletedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientRegisteredEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/EventHandlers/PatientRegisteredEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/EventHandlers/PatientUpdatedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/EventHandlers/PatientUpdatedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Queries/GetPatientDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Queries/GetPatientQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Features/Patients/Queries/GetPatientsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Features/Patients/Queries/GetPatientsQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/Configurations/MedicalRecordConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Infrastructure/Data/Configurations/MedicalRecordConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/Configurations/PatientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Infrastructure/Data/Configurations/PatientConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/IPatientManagementDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Infrastructure/Data/IPatientDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/PatientManagementDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Infrastructure/Data/PatientDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/Infrastructure/Data/PatientManagementDbContextInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Infrastructure/Data/PatientDbContextInitialiser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PatientManagement/PatientManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/SpecializedExamination.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/ConfigureServices.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Entities/ExaminationRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Domain/Entities/ExaminationRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationAssignedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Domain/Events/ExaminitaionRequest/ExaminationAssignedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationCompletedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Domain/Events/ExaminitaionRequest/ExaminationCompletedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationRequestedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Domain/Events/ExaminitaionRequest/ExaminationRequestedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Domain/Events/ExaminitaionRequest/ExaminationStartedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Domain/Events/ExaminitaionRequest/ExaminationStartedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/AssingExaminationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Features/ExaminitationRequest/Commands/AssingExaminationCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/CompleteExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Features/ExaminitationRequest/Commands/CompleteExamination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/Commands/RequestExaminationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Features/ExaminitationRequest/Commands/RequestExaminationCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Features/ExaminitationRequest/EventHandlers/ExaminationCompletedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Features/ExaminitationRequest/EventHandlers/ExaminationRequestedEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Features/ExaminitationRequest/EventHandlers/ExaminationRequestedEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/ISpecializedExaminationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Infrastructure/Data/ISpecializedExaminationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/SpecializedExaminationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Infrastructure/Data/SpecializedExaminationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/Infrastructure/Data/SpecializedExaminationDbContextInitialiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpecializedExamination/Infrastructure/Data/SpecializedExaminationDbContextInitialiser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpecializedExaminations/SpecializedExaminations.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient/Patient.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebApi/WebApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,12 +134,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/484917e236e092d5ce76c5f373993d21fb07a86c2912aaaec5db139b77ac48/SwaggerGenServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64274010236a347223a5cac7c0d6d95cc3af6022a9d2c8625e2c8bb5317f8/ISaveChangesInterceptor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Application/Common/Interfaces/IApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Application/DoctorTreatsPatients/ExaminitationRequest/Commands/AssingExaminationCommand.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Domain/DoctorTreatsPatients/Entities/Department.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Infrastructure/Data/Migrations/00000000000000_InitialCreate.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/Infrastructure/Data/Migrations/ApplicationDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Infrastructure/DependencyInjection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PV293/Repo/pv293-system-for-sharing-info-in-hospitals/src/SpecializedExamination/DependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WebApi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -186,26 +150,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WebApi: http.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WebApi: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\aglle\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\aglle\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\aglle\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: http">
+}</component>
+  <component name="RunManager">
     <configuration name="WebApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/WebApi/WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -301,9 +266,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706819622186</updated>
-      <workItem from="1706819624358" duration="9059000" />
+      <workItem from="1706819624358" duration="9262000" />
+      <workItem from="1706828948686" duration="1746000" />
+      <workItem from="1706830708759" duration="329000" />
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor: refactored based on the last review">
+      <option name="closed" value="true" />
+      <created>1706828904872</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706828904872</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +294,7 @@
     <MESSAGE value="feat: added controllers" />
     <MESSAGE value="feat: added migration and refactor" />
     <MESSAGE value="fix: pipelien" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: pipelien" />
+    <MESSAGE value="refactor: refactored based on the last review" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: refactored based on the last review" />
   </component>
 </project>
