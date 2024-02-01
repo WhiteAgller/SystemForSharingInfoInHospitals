@@ -1,8 +1,11 @@
-using Microsoft.EntityFrameworkCore;
+using Appointments;
+using Common;
+using HospitalManagement;
 using Microsoft.OpenApi.Models;
-using SystemForSharingInfoInHospitals.Application;
-using SystemForSharingInfoInHospitals.Infrastructure;
-using SystemForSharingInfoInHospitals.Infrastructure.Data;
+using PatientManagement;
+using SpecializedExaminations;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,11 @@ builder.Services.AddSwaggerGen(x =>
     x.SwaggerDoc("v1", new OpenApiInfo { Title = "Hospital API", Version = "v1" });
 });
 
-builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddCommonServices();
+builder.Services.AddAppointmentsServices(builder.Configuration);
+builder.Services.AddHospitalManagementServices(builder.Configuration);
+builder.Services.AddPatientManagementServices(builder.Configuration);
+builder.Services.AddSpecializedExaminationServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -33,10 +39,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapControllers();
 
-using var scope = ((IApplicationBuilder)app).ApplicationServices.CreateScope();
-using var context = scope.ServiceProvider.GetService<ApplicationDbContext>();
-context?.Database.EnsureCreated();
-context?.Database.Migrate();
+// using var scope = ((IApplicationBuilder)app).ApplicationServices.CreateScope();
+// using var context = scope.ServiceProvider.GetService<ApplicationDbContext>();
+// context?.Database.EnsureCreated();
+// context?.Database.Migrate();
 
 app.Run();
 

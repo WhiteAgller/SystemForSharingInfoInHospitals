@@ -20,8 +20,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Application\Application.csproj" />
-      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\Appointments\Appointments.csproj" />
+      <ProjectReference Include="..\HospitalManagement\HospitalManagement.csproj" />
+      <ProjectReference Include="..\PatientManagement\PatientManagement.csproj" />
+      <ProjectReference Include="..\SpecializedExaminations\SpecializedExaminations.csproj" />
     </ItemGroup>
 
 </Project>
