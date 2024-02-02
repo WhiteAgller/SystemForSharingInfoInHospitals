@@ -24,6 +24,7 @@ builder.Services.AddHospitalManagementServices(builder.Configuration);
 builder.Services.AddPatientManagementServices(builder.Configuration);
 builder.Services.AddSpecializedExaminationServices(builder.Configuration);
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

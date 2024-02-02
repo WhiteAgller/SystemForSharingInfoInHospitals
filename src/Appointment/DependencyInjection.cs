@@ -1,5 +1,7 @@
+using System.Reflection;
 using Appointments.Infrastructure.Data;
 using Ardalis.GuardClauses;
+using AutoMapper;
 using Common.Interceptors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -29,6 +31,9 @@ public static class DependencyInjection
         services.AddScoped<IAppointmentDbContext>(provider => provider.GetRequiredService<AppointmentDbContext>());
 
         services.AddScoped<AppointmentDbContextInitialiser>();
+        
+        services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
         
         return services;
     }

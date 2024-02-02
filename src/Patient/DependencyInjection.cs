@@ -1,3 +1,4 @@
+using System.Reflection;
 using Ardalis.GuardClauses;
 using Common.Interceptors;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,9 @@ public static class DependencyInjection
         services.AddScoped<IPatientDbContext>(provider => provider.GetRequiredService<PatientDbContext>());
 
         services.AddScoped<PatientDbContextInitialiser>();
+        
+        services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
         
         return services;
     }

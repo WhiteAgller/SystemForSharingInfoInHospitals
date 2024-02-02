@@ -30,6 +30,8 @@ public static class DependencyInjection
 
         services.AddScoped<SpecializedExaminationDbContextInitialiser>();
         
+        services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
+        
         return services;
     }
 }

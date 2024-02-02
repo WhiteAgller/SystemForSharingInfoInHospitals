@@ -30,6 +30,8 @@ public static class DependencyInjection
 
         services.AddScoped<HospitalDbContextInitialiser>();
         
+        services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
+        
         return services;
     }
 }
